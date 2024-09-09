@@ -1,14 +1,17 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# **[Joan]** - Portafolio
 
-<div align="center">
-<a href="https://porfolio-jenajas.dev/">
-<img src="./public/porfolio.webp">
-</a>
-<p></p>
-</div>
-
-<div align="center">
+**¡Hola! Soy [Joan], [Programador junior.**
 
 
-</div>
+
+## Proyectos
+* **[Tesla]:** 
+    * [[Link al proyecto](https://github.com/J0anet/tesla-landing)]
+* **[Juego "Dinos"]:
+    * [https://github.com/J0anet/DinoJoan]
+* ...
+
+En este Github puedes encontrar mas sobre mí ya que iré subiendo proyectos poco a poco.
+
+**¡Gracias por visitar mi portafolio!**
 
