@@ -1,6 +1,6 @@
 # **Joan** - Porfolio
 
-**¡Hola! Soy Joan, Programador junior.**
+**¡Hola! Soy Joan, programador junior.**
 
 
 
