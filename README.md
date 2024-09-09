@@ -6,9 +6,9 @@
 
 ## Proyectos
 * **Tesla:** 
-    * (https://github.com/J0anet/tesla-landing)]
+    * https://github.com/J0anet/tesla-landing
 * **Juego "Dinos":**
-    * [https://github.com/J0anet/DinoJoan]
+    * https://github.com/J0anet/DinoJoan
 * ...
 
 En este Github puedes encontrar mas sobre mí ya que iré subiendo proyectos poco a poco.
