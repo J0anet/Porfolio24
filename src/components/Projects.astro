@@ -4,6 +4,12 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Moon from "./icons/Moon.astro"
+import Astros from "./icons/AstroLog.astro"
+import JS from "./icons/JS.astro"
+import JAVA from "./icons/java.astro"
+import KOTLIN from "./icons/Kotlin.astro"
+
 
 const TAGS = {
   NEXT: {
@@ -16,24 +22,53 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ASTROs: {
+    name: "Astro",
+    class: "bg-[#673AB7] text-white",
+    icon: Astros,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#FFEB3B] text-black",
+    icon: JS
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#E57373] text-black",
+    icon: JAVA
+  },
+  KOTLIN: {
+    name: "Kotlin",
+    class: "bg-white text-black",
+    icon: KOTLIN
+  }
+
+  
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Tesla - Landing Tesla.",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Copia de la web de tesla para practicar con JavaScript y Astro",
+    github: "https://github.com/J0anet/tesla-landing",
+    image: "/projects/tesla-photo.jpg",
+    tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.ASTROs,],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "DINOS JOAN - Juego mata rocas.",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Juego que trata en que eres un dinosaurio y tienes que romper con disparos, todas las rocas ya que al colisionar, mueres.",
+    github: "https://github.com/J0anet/DinoJoan",
+    image: "/projects/dino-photo.webp",
+    tags: [TAGS.JAVA],
+  },
+  {
+    title: "PizzaLgust - APP pizzas 100% personalizables.",
+    description:
+      "¡Crea tu pizza perfecta con un toque! Nuestra app te permite personalizar cada ingrediente de tu pizza, desde la masa hasta la última rodaja de pepperoni. ¡Imagina, crea y disfruta! ",
+    github: "https://github.com/J0anet/PizzaLgust",
+    image: "/projects/AllPizzas4.png",
+    tags: [TAGS.KOTLIN],
   },
 ]
 ---
@@ -44,7 +79,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="foto inicial del juego" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
