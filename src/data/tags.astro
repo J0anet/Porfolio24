@@ -1,0 +1,33 @@
+---
+import NextJS from "@/components/icons/NextJS.astro"
+import Tailwind from "@/components/icons/Tailwind.astro"
+import Astros from "@/components/icons/AstroLog.astro"
+import JS from "@/components/icons/JS.astro"
+import JAVA from "@/components/icons/java.astro"
+import KOTLIN from "@/components/icons/Kotlin.astro"
+import REACT from "@/components/icons/React.astro"
+import FIREBASE from "@/components/icons/Firebase.astro"
+import TYPESCRIPT from "@/components/icons/TypeScript.astro"
+import SUPABASE from "@/components/icons/Supabase.astro"
+import GitHub from "@/components/icons/GitHub.astro"
+import NETLIFY from "@/components/icons/Netlify.astro"
+import GEMINI from "@/components/icons/Gemini.astro"
+
+export const TAGS = {
+  NEXT: { name: "Next.js", class: "bg-black text-white", icon: NextJS, glow: "#000000" },
+  TAILWIND: { name: "Tailwind CSS", class: "bg-[#06B6D4] text-black", icon: Tailwind, glow: "#06B6D4" },
+  ASTROs: { name: "Astro", class: "bg-[#BC52EE] text-white", icon: Astros, glow: "#BC52EE" },
+  JAVASCRIPT: { name: "JavaScript", class: "bg-[#F7DF1E] text-black", icon: JS, glow: "#F7DF1E" },
+  JAVA: { name: "Java", class: "bg-[#ED8B00] text-white", icon: JAVA, glow: "#ED8B00" },
+  KOTLIN: { name: "Kotlin", class: "bg-[#7F52FF] text-white", icon: KOTLIN, glow: "#7F52FF" },
+  REACT: { name: "React", class: "bg-[#20232a] text-[#61dafb]", icon: REACT, glow: "#61DAFB" },
+  FIREBASE: { name: "Firebase", class: "bg-[#FFCA28] text-black", icon: FIREBASE, glow: "#FFCA28" },
+  TYPESCRIPT: { name: "TypeScript", class: "bg-[#3178C6] text-white", icon: TYPESCRIPT, glow: "#3178C6" },
+  SUPABASE: { name: "Supabase", class: "bg-[#3ECF8E] text-black", icon: SUPABASE, glow: "#3ECF8E" },
+  GITHUB: { name: "GitHub", class: "bg-black text-white", icon: GitHub, glow: "#000000" },
+  NETLIFY: { name: "Netlify Functions", class: "bg-[#00C7B7] text-black", icon: NETLIFY, glow: "#00C7B7" },
+  NETLIFY_IDENTITY: { name: "Netlify Identity", class: "bg-[#00C7B7] text-black", icon: NETLIFY, glow: "#00C7B7" },
+  DECAP: { name: "Decap CMS", class: "bg-gray-800 text-white", icon: null, glow: "#4B5563" },
+  GEMINI: { name: "Gemini API", class: "bg-[#8E75B7] text-white", icon: GEMINI, glow: "#8E75B7" },
+}
+---

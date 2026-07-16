@@ -5,7 +5,10 @@ import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import GitHubIcon from "@/components/icons/GitHub.astro"
-import PdfIcon from "@/components/icons/pdf.astro"
+import { useTranslations, getLangFromUrl } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <div class="max-w-xl">
@@ -15,26 +18,25 @@ import PdfIcon from "@/components/icons/pdf.astro"
       src="/joan-perfil.webp"
       alt={personalImageAlt}
     />
-    <aS
+    <a
       href="https://www.linkedin.com/in/joan-enajas-cortés-4689906a"
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
     >
-      <Badge>Disponible para trabajar</Badge>
-    </aS>
+      <Badge>{t("hero.badge")}</Badge>
+    </a>
   </div>
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-  Hola 👋, soy Joan!
+    {t("hero.greeting")}
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    <strong>Desarrollador de Aplicaciones multiplataforma.</strong>
-    Soy un <strong>programador júnior</strong> con ganas de entrar en el mundo TECH.                
-    Aquí podrás ver más sobre mi recorrido, intereses y proyectos. 
+    <strong>{t("hero.headline")}</strong>
+    {t("hero.description")}
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:joan.enajas@gmail.com">
@@ -45,9 +47,9 @@ import PdfIcon from "@/components/icons/pdf.astro"
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
-    <SocialPill href="https://github.com/j0anet"> <GitHubIcon class="size-4" />
+    <SocialPill href="https://github.com/j0anet">
+      <GitHubIcon class="size-4" />
       GitHub
     </SocialPill>
-    
   </nav>
 </div>

@@ -1,0 +1,71 @@
+---
+import { TAGS } from "@/data/tags.astro"
+import { useTranslations, getLangFromUrl } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const textChip = (name: string) => ({
+  name,
+  class: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
+  icon: null,
+  glow: "#9CA3AF",
+})
+
+const CATEGORIES = [
+  {
+    title: t("stack.mobile"),
+    description: t("stack.mobile.desc"),
+    items: [
+      TAGS.KOTLIN,
+      TAGS.JAVA,
+      textChip("RFID UHF"),
+      textChip("BLE"),
+      textChip("NFC"),
+      textChip("GPS / NMEA"),
+      textChip("TomTom SDK · HERE"),
+    ],
+  },
+  {
+    title: t("stack.frontend"),
+    description: t("stack.frontend.desc"),
+    items: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.JAVASCRIPT, TAGS.ASTROs, TAGS.TAILWIND],
+  },
+  {
+    title: t("stack.backend"),
+    description: t("stack.backend.desc"),
+    items: [{ ...TAGS.SUPABASE, name: "Supabase (PostgreSQL)" }, TAGS.FIREBASE, TAGS.DECAP],
+  },
+  {
+    title: t("stack.tools"),
+    description: t("stack.tools.desc"),
+    items: [TAGS.GITHUB, { ...TAGS.NETLIFY, name: "Netlify" }, TAGS.NETLIFY, TAGS.NETLIFY_IDENTITY],
+  },
+]
+---
+
+<div class="flex flex-col gap-8">
+  <p class="text-gray-600 dark:text-gray-400">{t("stack.subtitle")}</p>
+  {
+    CATEGORIES.map((category) => (
+      <div>
+        <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-500">
+          {category.title}
+        </h3>
+        <p class="mb-3 text-sm text-gray-500 dark:text-gray-400">{category.description}</p>
+        <ul class="flex flex-wrap gap-2">
+          {category.items.map((item) => (
+            <li style={{ "--glow": item.glow }}>
+              <span
+                class={`flex items-center gap-x-2 rounded-full text-sm ${item.class} py-1.5 px-3 ring-1 ring-transparent transition hover:-translate-y-0.5 hover:shadow-[0_0_8px_var(--glow)] hover:ring-[color:var(--glow)]`}
+              >
+                {item.icon && <item.icon class="size-4" />}
+                {item.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>

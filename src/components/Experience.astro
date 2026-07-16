@@ -1,16 +1,23 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import { useTranslations, getLangFromUrl } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
 const EXPERIENCE = [
   {
-    date: "Febrero 2023 - Julio 2023",
-    title: "Practicas Full Stack",
-    company: "Aduxia",
-    description:
-      "En periodo de prácticas me enseñaron mucho el funcionamiento de una empresa, como trabajar en equipo y la comunicación con el equipo. A nivel técnico hice mucha maquetación y diseño web, me enseñaron distintos frameworks como Bootstrap, Tailwind o Chakra.",
-      
-    
+    date: t("experience.idwaste.date"),
+    title: t("experience.idwaste.title"),
+    company: t("experience.idwaste.company"),
+    description: t("experience.idwaste.description"),
   },
-  
+  {
+    date: t("experience.aduxia.date"),
+    title: t("experience.aduxia.title"),
+    company: t("experience.aduxia.company"),
+    description: t("experience.aduxia.description"),
+  },
 ]
 ---
 

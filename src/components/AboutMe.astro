@@ -1,34 +1,20 @@
 ---
- const personalImageAlt = "Joan Enajas"
+const personalImageAlt = "Joan Enajas"
+import { useTranslations, getLangFromUrl } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
   <div
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
-    <p>
-      Soy Joan, desarrollador de aplicaciones multiplataforma,<strong
-        > busco incorporarme a una empresa del sector IT</strong
-        donde pueda aplicar mis conocimientos y habilidades en proyectos reales.
-        
-      >.
-    </p>
-
-    <p>
-      Mi objetivo es crecer profesionalmente en un entorno dinámico y colaborativo <strong
-        >contribuyendo al desarrollo de aplicaciones móviles innovadoras.</strong
-      
-    </p>
-
-    <p>
-      Mi interés principal se centra en el desarrollo móvil, <strong
-        > pero soy consciente de la amplia gama de oportunidades que ofrece el sector IT.</strong
-      > Mi formación me ha proporcionado una visión general de los diferentes ámbitos de la programación, 
-      lo que me permite abordar nuevos desafíos con entusiasmo y adaptabilidad.
-    </p>
+    <p set:html={t("about.p1")} />
+    <p set:html={t("about.p2")} />
+    <p set:html={t("about.p3")} />
   </div>
 
-  <img width="200" height="200" src="/joan-perfil.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
+  <img width="200" height="200" src="/projects/joan_idwaste_BN.png" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
 
 </article>
-
