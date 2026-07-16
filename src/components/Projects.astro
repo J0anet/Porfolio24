@@ -12,7 +12,6 @@ const t = useTranslations(lang)
 const RESTAURANT_TEMPLATE_URL = "https://demores1.netlify.app/"
 
 // Els 3 projectes que expliquen l'evolució: client real -> sistema propi -> versatilitat.
-// El link de l'01 i els vídeos de l'02 són reals; el vídeo de l'03 encara és un placeholder.
 const NARRATIVE_PROJECTS = [
   {
     accent: { border: "border-l-blue-500", badge: "bg-blue-500" },
@@ -21,6 +20,7 @@ const NARRATIVE_PROJECTS = [
     description: t("projects.restaurantTemplate.description"),
     tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.NETLIFY, TAGS.GEMINI],
     evolutionNote: null,
+    cta: { label: t("projects.restaurantTemplate.businessCta"), href: "mailto:joan.enajas@gmail.com" },
     media: {
       type: "screenshot" as const,
       src: "/projects/restaurant-template.png",
@@ -51,25 +51,11 @@ const NARRATIVE_PROJECTS = [
     description: t("projects.courtstats.description"),
     tags: [TAGS.JAVASCRIPT, TAGS.FIREBASE],
     evolutionNote: null,
-    media: { type: "video" as const, src: "/projects/marcador.mp4" },
+    media: { type: "video" as const, src: "/projects/marcador.mp4", poster: "/projects/marcador-poster.jpg" },
   },
 ]
 
 const OTHER_PROJECTS = [
-  {
-    title: t("projects.tesla.title"),
-    description: t("projects.tesla.description"),
-    github: "https://github.com/J0anet/tesla-landing",
-    image: "/projects/tesla-photo.jpg",
-    tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND, TAGS.ASTROs],
-  },
-  {
-    title: t("projects.dino.title"),
-    description: t("projects.dino.description"),
-    github: "https://github.com/J0anet/DinoJoan",
-    image: "/projects/dino-photo.webp",
-    tags: [TAGS.JAVA],
-  },
   {
     title: t("projects.pizza.title"),
     description: t("projects.pizza.description"),

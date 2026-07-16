@@ -33,10 +33,11 @@
       content.innerHTML = ""
     }
 
-    const openVideo = (src: string) => {
+    const openVideo = (src: string, poster?: string) => {
       content.innerHTML = ""
       const video = document.createElement("video")
       video.src = src
+      if (poster) video.poster = poster
       video.controls = true
       video.autoplay = true
       video.className = "max-h-[85vh] max-w-full rounded-lg"
@@ -59,7 +60,7 @@
     document.querySelectorAll<HTMLElement>("[data-lightbox-video]").forEach((el) => {
       el.addEventListener("click", () => {
         const src = el.dataset.lightboxVideo
-        if (src) openVideo(src)
+        if (src) openVideo(src, el.dataset.lightboxPoster)
       })
     })
     document.querySelectorAll<HTMLElement>("[data-lightbox-image]").forEach((el) => {
